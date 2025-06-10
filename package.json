@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:ios": "ionic cap run ios -l --external -c",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test.e2e": "cypress run",
@@ -15,8 +16,10 @@
     "@capacitor/app": "7.0.1",
     "@capacitor/core": "7.3.0",
     "@capacitor/haptics": "7.0.1",
+    "@capacitor/ios": "7.3.0",
     "@capacitor/keyboard": "7.0.1",
     "@capacitor/status-bar": "7.0.1",
+    "@capgo/capacitor-updater": "^7.2.5",
     "@ionic/react": "^8.5.0",
     "@ionic/react-router": "^8.5.0",
     "@types/react-router": "^5.1.20",
