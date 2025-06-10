@@ -8,35 +8,34 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import { chevronBack } from 'ionicons/icons';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab2.css';
 
-const Tab2: React.FC = () => {
+const Page2: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
             <IonBackButton
-              defaultHref="/tab1"
-              className="toolbar-back-button"
+              defaultHref="/page1"
               icon={chevronBack}
               text=""
             />
           </IonButtons>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Page 2</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">Page 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <div className="container">
+          This is page 2
+        </div>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Tab2;
+export default Page2;
