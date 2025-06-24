@@ -5,9 +5,9 @@ import {
   IonTitle,
   IonToolbar,
   useIonRouter,
-} from '@ionic/react';
-import { CapacitorUpdater } from '@capgo/capacitor-updater';
-import './Page1.css';
+} from "@ionic/react";
+import { CapacitorUpdater } from "@capgo/capacitor-updater";
+import "./Page1.css";
 
 const Page1: React.FC = () => {
   const router = useIonRouter();
@@ -27,15 +27,17 @@ const Page1: React.FC = () => {
         </IonHeader>
         <div className="container">
           <h1 className="page-title">Welcome</h1>
-          <button 
+          <button
             className="content-button reload-button"
-            onClick={() => CapacitorUpdater.reload()}
+            onClick={() => {
+              CapacitorUpdater.reload();
+            }}
           >
             Reload App
           </button>
-          <button 
+          <button
             className="content-button"
-            onClick={() => router.push('/page2', 'forward', 'push')}
+            onClick={() => router.push("/page2", "forward", "push")}
           >
             Go to Page 2
           </button>

@@ -6,8 +6,9 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-} from '@ionic/react';
-import { chevronBack } from 'ionicons/icons';
+} from "@ionic/react";
+import { chevronBack } from "ionicons/icons";
+import { CapacitorUpdater } from "@capgo/capacitor-updater";
 
 const Page2: React.FC = () => {
   return (
@@ -15,11 +16,7 @@ const Page2: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton
-              defaultHref="/page1"
-              icon={chevronBack}
-              text=""
-            />
+            <IonBackButton defaultHref="/page1" icon={chevronBack} text="" />
           </IonButtons>
           <IonTitle>Page 2</IonTitle>
         </IonToolbar>
@@ -30,8 +27,17 @@ const Page2: React.FC = () => {
             <IonTitle size="large">Page 2</IonTitle>
           </IonToolbar>
         </IonHeader>
+
         <div className="container">
-          This is page 2
+          <button
+            className="content-button reload-button"
+            onClick={() => {
+              CapacitorUpdater.reload();
+            }}
+          >
+            Reload App
+          </button>
+          <p>This is page 2</p>
         </div>
       </IonContent>
     </IonPage>
